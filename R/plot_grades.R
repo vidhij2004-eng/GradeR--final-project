@@ -1,10 +1,9 @@
 #' Plot a histogram of student grades
 
-#' This function provides a very simple visualization using ggplot2.
-#' It uses [check_grade_column()] to ensure the grade column is valid,
-#' then creates a histogram to show the distribution of grades. This is
-#' intentionally simple and beginner-friendly, matching the goals of the
-#' project and the course modules.
+#Using ggplot2 to create a very simple visual representation is the purpose of this function. 
+#The function first uses [check_grade_column()] to validate the grade column, and then it generates 
+# histogram that illustrates how grades are distributed across all grades. The objective is to provide a very basic, 
+#beginner-friendly version of this functionality, which meets the expectations for the project and module.
 
 plot_grades <- function(df, grade_col) {
   x <- check_grade_column(df, grade_col)
