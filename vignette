@@ -1,0 +1,32 @@
+---
+title: "Getting Started with GradeR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with GradeR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This is the Introduction to the gradeR package, which is developed by Vidhi Jani to offer simple tools to work with student performance data. The package 
+was developed as part of the final project for an R programming class 
+and covers the following areas: Building a correct DESCRIPTION file (Module 10) Implementing 'defensive programming' in 
+R functions (Module 11) Using R Markdown to document the package (Module 12) 
+The chosen dataset for this project is the Kaggle Student Performance Data Set. https://www.kaggle.com/datasets/larsen0966/student-performance-data-set 
+This dataset includes student grades (G1, G2, G3) along with demographic and social factors. Example Data To keep the vignette self-contained, 
+we will create a small data frame that mimics the real Kaggle dataset structure. student_data <- data.frame( student_id = 1:10, G3 = c(10, 12, 14, 15, 9, 11, 16, 18, 13, 8), 
+studytime = c(2, 3, 4, 2, 1, 3, 4, 4, 2, 1) ) student_data Checking the Grade Column (Defensive Programming) The check_grade_column() function ensures that: 
+The data frame is valid The requested grade column exists The grade column is numeric library(gradeR) check_grade_column(student_data, "G3") Summary of Grades (S3 Class) 
+The grade_summary() function returns a simple summary: summary_result <- grade_summary(student_data, "G3") summary_result Plotting Grades 
+The plot_grades() function provides a simple histogram of the grade distribution using ggplot2. plot_grades(student_data, "G3")
+
+To use the real dataset in your own analysis, download the CSV from Kaggle and read it like this: full_data <- read.csv("student-por.csv", sep = ";") plot_grades(full_data, "G3") 
+summary_result <- grade_summary(full_data, "G3") This vignette demonstrates how to: Validate a grade column Summarize student grades Plot grade distributions Apply defensive 
+programming
+
