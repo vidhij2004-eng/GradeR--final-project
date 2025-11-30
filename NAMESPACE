@@ -1,0 +1,5 @@
+export(check_grade_column)
+export(grade_summary)
+export(plot_grades)
+S3method(print, grade_summary)
+importFrom(ggplot2, ggplot, aes, geom_histogram, labs, theme_minimal)
