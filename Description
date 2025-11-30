@@ -1,0 +1,15 @@
+Package: gradeR
+Type: Package
+Title: Simple Tools for Student Performance Data
+Version: 0.1.0
+Authors@R: c(
+    person("Vidhi", "Jani", email = "vidhij2004@gmail.com", role = c("aut", "cre"))
+)
+Description: This is a sample package created for an Advanced R Programming Course's final project. It includes how you would write a DESCRIPTION file, defensive programming for simple functions, and documentation via R Markdown vignette. The package is derived from the Kaggle "Student Performance Data Set" provided by larsen0966 and provides grade levels (G1, G2, G3) for secondary school students as well as some associated characteristics.
+Depends: R (>= 4.0.0)
+Imports:
+    ggplot2
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
